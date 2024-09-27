@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0; 
+            margin: 0;
+            font-family: Arial, sans-serif; 
+        }
+
+        .calculator {
+            display: grid;
+            grid-template-rows: auto 1fr; 
+            gap: 10px; 
+            padding: 20px;
+            background-color: white; 
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+            width: 300px; 
+        }
+
+        .header {
+            text-align: center;
+            font-size: 24px;
+            color: black; 
+        }
+
+        .display {
+            background-color: #e0e0e0;
+            border: 2px solid #ccc; 
+            border-radius: 5px; 
+            height: 50px; 
+            font-size: 32px;
+            padding: 10px;
+            text-align: right; 
+            overflow: hidden; 
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 10px; 
+        }
+
+        .button {
+            padding: 20px;
+            text-align: center;
+            font-size: 18px;
+            color: white;  
+            background-color: #007BFF;  
+            border: none;
+            border-radius: 5px;  
+            transition: background-color 0.3s;  
+            cursor: pointer; 
+        }
+
+        .button:hover {
+            background-color: #0056b3; 
+        }
+
+        .operator {
+            background-color: #333; 
+        }
+
+        .clear {
+            background-color: red; 
+        }
+
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div class="header">Calculator</div>
+        <div class="display" id="display">0</div>
+        <div class="buttons">
+            <button class="button clear">C</button>
+            <button class="button operator">/</button>
+            <button class="button operator">*</button>
+            <button class="button operator">-</button>
+            <button class="button">7</button>
+            <button class="button">8</button>
+            <button class="button">9</button>
+            <button class="button operator">+</button>
+            <button class="button">4</button>
+            <button class="button">5</button>
+            <button class="button">6</button>
+            <button class="button operator">=</button>
+            <button class="button">1</button>
+            <button class="button">2</button>
+            <button class="button">3</button>
+            <button class="button"></button>
+            <button class="button">0</button>
+            <button class="button"></button>
+            <button class="button"></button>
+            <button class="button"></button>
+        </div>
+    </div>
+</body>
+</html>
+
