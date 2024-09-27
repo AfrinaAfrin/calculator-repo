@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Flexbox Layout</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .card {
+    display: flex;
+    flex-wrap: wrap;
+    background: #f0f0f0;
+    border: 2px solid yellow;
+  }
+  .card img {
+    flex: 1 1 150px; /* Flex basis of 150px */
+    width: 100%;
+    max-width: 150px;
+    height: 100px;
+    object-fit: cover;
+  }
+  .content {
+    flex: 3 1 300px; /* Flex basis of 300px */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .content h2 {
+    margin: 0;
+  }
+  .content p {
+    margin: 10px 0;
+  }
+  .content a {
+    align-self: start;
+    color: blue;
+    text-decoration: none;
+  }
+  @media (max-width: 768px) {
+    .card {
+      flex-direction: column;
+    }
+    .content {
+      flex: 1 1 auto;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="card">
+     
+    <div class="content">
+      <h2>Title</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vero deleniti incidunt rem. Voluptate, tempor quos, suscipit temporibus autem sapiente.</p>
+      <a href="#">Read more</a>
+    </div>
+  </div>
+  <div class="card">
+    
+    <div class="content">
+      <h2>Title</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vero deleniti incidunt rem. Voluptate, tempor quos, suscipit temporibus autem sapiente.</p>
+      <a href="#">Read more</a>
+    </div>
+  </div>
+  <div class="card">
+
+    <div class="content">
+      <h2>Title</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vero deleniti incidunt rem. Voluptate, tempor quos, suscipit temporibus autem sapiente.</p>
+      <a href="#">Read more</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
